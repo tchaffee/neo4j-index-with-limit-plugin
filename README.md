@@ -5,6 +5,7 @@
 * Based on Neo4j 1.3 Server
 * Uses the org.neo4j.server.plugins.ServerPlugin feature.
 * Only implemented for Node Indexes right now.
+* More information about how to create [Neo4j Server Plugins](http://docs.neo4j.org/chunked/stable/server-plugins.html)
 
 ## Use Case ##
 
