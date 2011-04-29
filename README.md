@@ -29,7 +29,7 @@
 * Check if the extension is installed:
 * `curl -H Accept:application/json http://localhost:7474/db/data/`
 * You should see the extension listed in the output:
-
+<pre>
    {
      "relationship_index" : "http://localhost:7474/db/data/index/relationship",
      "node" : "http://localhost:7474/db/data/node",
@@ -43,11 +43,11 @@
        }
      }
    }
-
+</pre>
 * Find the required parameters:
 * `curl -H Accept:appplication/json http://localhost:7474/db/data/ext/NodeIndex/graphd/limit_by_count`
 * You'll get something like the following:
-
+<pre>
    {
      "extends" : "graphdb",
      "description" : "Get the results of an index search with a limit on number of results returned.",
@@ -73,7 +73,7 @@
        "name" : "count",
        "type" : "integer"
      } ]
-  
+</pre>  
 * Based on the above information about parameter types, we can build the following string to retrieve the first 4 nodes from the 'names' index that have an 'a' somewhere in the value associated with the 'name' key.
 * `curl -X POST -H Accept:appplication/json -H Content-Type:application/json http://localhost:7474/db/data/ext/NodeIndex/graphdb/limit_by_count -d '{"index":"names", "key":"name", "query":"*a*", "count":4}'`
 * Should return 4 nodes very quickly which is nice considering there could be millions of matching nodes.
