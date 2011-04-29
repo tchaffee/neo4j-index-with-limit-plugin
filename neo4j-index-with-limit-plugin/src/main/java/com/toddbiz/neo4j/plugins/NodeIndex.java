@@ -20,6 +20,9 @@ import org.neo4j.server.plugins.Parameter;
 /**
  * Extensions to the Index service.
  *
+ * @author Todd Chaffee
+ * Some rights reserved.  Please contact the author for copyright information.
+ * 
  */
 public class NodeIndex extends ServerPlugin 
 {
